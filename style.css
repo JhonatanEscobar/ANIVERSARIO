@@ -161,16 +161,106 @@ span {
 
 } */
 body {
+    background-color: rgb(255, 218, 185); /* Un tono naranja suave */
     margin: 0;
+    font-family: 'Lora', serif; /* Aplicar fuente general */
+}
+
+.contenedor {
+    display: flex; /* Usa Flexbox para la disposición */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 0px; /* Añade un poco de espacio interior */
+}
+
+.columna-izquierda {
+    flex: 2; /* Ocupa más espacio */
+    padding: 0px;
+    background-color:rgb(255, 218, 185); /* Fondo blanco para la columna */
+    border-radius: 0px; /* Bordes redondeados */
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.columna-derecha {
+    flex: 1; /* Ocupa menos espacio */
+    padding: 18px;
+    background-color: rgb(255, 218, 185); /* Fondo gris claro para la columna */
+    border-radius: 0px; /* Bordes redondeados */
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: right; /* Alinea el texto a la derecha */
 }
 
 #fa1 {
-    background-color: red; /* Fondo negro */
-    color: black; /* Texto blanco para contraste */
-    font-size: 90px;
-    font-family: 'Grey Qo';
+    background-color: rgb(255, 127, 80); /* Fondo rojo oscuro */
+    color: rgb(139, 0, 0); /* Texto en un tono claro */
+    font-size: 40px;
+    font-family: 'Lora', serif; /* Fuente específica para el título */
     text-align: center; /* Centrar el texto */
     padding: 20px; /* Espacio alrededor del texto */
     margin: 0 auto; /* Centrarse dentro del contenedor */
     width: auto; /* Ajustar el ancho al contenido */
+    border-radius: 0px; /* Bordes redondeados opcionales */
+}
+
+#carta1,#mensajeOculto {
+    font-family: 'Lora', serif; /* Fuente específica para el párrafo */
+    background-color: #f4e2c2; /* Fondo de la carta */
+    padding: 20px;
+    border-radius: 15px; /* Bordes redondeados */
+    border: 2px solid #d3b797; /* Borde de la carta */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin: 20px auto; /* Margen alrededor y centrado horizontalmente */
+    line-height: 1.6; /* Espaciado entre líneas */
+    text-align: justify; /* Justificar el texto */
+    font-size: 18px;
+    color: #4b2a2a; /* Color del texto */
+    width: 80%; /* Ancho relativo al contenedor */
+    max-width: 600px; /* Ancho máximo */
+    position: relative; /* Necesario para los pseudo-elementos */
+}
+
+#carta1:before, #carta1:after,#mensajeOculto:before, #mensajeOculto:after {
+    content: '♥'; /* Ejemplo de contenido para los pseudo-elementos */
+    font-size: 50px;
+    color: #4b2a2a; /* Color de los pseudo-elementos */
+    position: absolute;
+}
+
+#carta1:before,#mensajeOculto:before {
+    left: -10px; /* Posición del pseudo-elemento izquierdo */
+    top: -10px; /* Posición del pseudo-elemento superior */
+}
+
+#carta1:after, #mensajeOculto:after {
+    right: -10px; /* Posición del pseudo-elemento derecho */
+    bottom: -10px; /* Posición del pseudo-elemento inferior */
+}
+.imagen {
+    display: block;
+    margin: 20px auto 0;
+    width: 150px; /* Tamaño de la imagen */
+    height: auto;
+    border-radius: 10px;
+}
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #5a3d2b; /* Color marrón para el botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #5a3d2b; /* Color marrón para el botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
